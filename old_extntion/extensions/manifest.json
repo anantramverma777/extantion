@@ -1,0 +1,30 @@
+{
+  "name": "ENVY Crawler Anant",
+  "description": "ENVY web site Crawler By Anant",
+  "version": "1.0",
+  "manifest_version": 3,
+   "permissions": [
+    "storage",
+	"tabs"
+  ],
+   
+   
+    "action": {
+    "default_icon": {              // optional
+      "16": "icon16.png",   // optional
+      "24": "icon16.png",   // optional
+      "32": "icon16.png"    // optional
+    },
+    "default_title": "Click Me",   // optional, shown in tooltip
+    "default_popup": "popup.html"  // optional
+  },
+   
+    "host_permissions": ["<all_urls>"],
+   
+   "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "js": ["jquery.js","content.js"]
+   }
+ ] 
+}
